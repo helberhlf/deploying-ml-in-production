@@ -7955,7 +7955,7 @@ if (outputEl) {{
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Plano de financiamento X Empréstimo</span>
-<span class="c1"># Table de contingência enter o relacionamento das variáveis categóricas</span>
+<span class="c1"># Table de contingência das variáveis categóricas</span>
 <span class="n">ct_finc_emp</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'installment_plans'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">'allow'</span><span class="p">])</span>
 
 <span class="c1"># Plot</span>
@@ -8097,7 +8097,7 @@ if (outputEl) {{
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Sumarização</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Agregação</span>
 <span class="n">mov</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'loan_purpose'</span><span class="p">,</span><span class="s1">'installment_plans'</span><span class="p">,</span><span class="s1">'allow'</span><span class="p">])</span>\
                  <span class="p">[</span><span class="s1">'loan_amount'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span><span class="s1">'loan_amount'</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span><span class="kc">False</span>
                 <span class="p">)</span>
@@ -8244,8 +8244,9 @@ if (outputEl) {{
 <div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Sumarização</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Fatiamento</span>
 <span class="n">parc</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'allow'</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Autorizado"</span><span class="p">]</span>
+<span class="c1"># Agregação</span>
 <span class="n">parc</span> <span class="o">=</span> <span class="n">parc</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'loan_purpose'</span><span class="p">,</span><span class="s1">'installment_percent'</span><span class="p">,</span><span class="s1">'installment_plans'</span><span class="p">,</span><span class="s1">'years'</span><span class="p">])</span>\
                     <span class="p">[</span><span class="s1">'loan_amount'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span><span class="p">[</span><span class="s1">'loan_amount'</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span><span class="kc">False</span>
                     <span class="p">)</span>
@@ -8315,7 +8316,7 @@ if (outputEl) {{
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Objetivo dessa seçao foi explorar os principais OKR's rápidos ao qual o problema negócio se destine: <strong>se o cliente está apto a solicitar um empréstimo (negado ou autorizado)</strong>. Porém, a concentra máxima deste projeto está em usa técnicas automatizadas para facilitar decisões mais rápidas e decisivas por meio do aprendizado de máquina, que é fundamental para o objetivo proposto deste projeto que seja atingido.</p>
+<p>Objetivo dessa seçao foi explorar os principais OKR's rápidos ao qual o problema negócio se destine: <strong>se o cliente está apto a solicitar um empréstimo (negado ou autorizado)</strong>. Porém, a concentra máxima deste projeto está em usa técnicas automatizadas para facilitar decisões mais rápidas e decisivas por meio do aprendizado de máquina, esta é a base para atingir os objetivos propostos neste projeto.</p>
 </div>
 </div>
 </div>
