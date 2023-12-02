@@ -111,7 +111,7 @@ def missing_values(df):
     col_names = ['column', 'percent_missing', ]
 
     # Create dataframe with values missing in an ordered way
-    missing_df = pd.DataFrame(data, columns=col_names).sort_values('percent_missing')
+    missing_df = pd.DataFrame(data, columns=col_names).sort_values('percent_missing',False)
 
     # Return dataframe the values missing
     return missing_df

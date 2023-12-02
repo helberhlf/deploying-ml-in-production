@@ -11,7 +11,7 @@ from time import strftime
 import tensorflow as tf
 
 # Setting log path
-root_logdir = os.path.join(os.curdir, "logs")
+root_logdir = os.path.join(os.curdir, "../logs")
 
 def get_run_logdir(root_logdir="logs"):
     return Path(root_logdir) / strftime("run_%Y_%m_%d_%H_%M_%S")
