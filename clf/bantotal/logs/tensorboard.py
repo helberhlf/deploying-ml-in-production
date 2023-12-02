@@ -1,5 +1,6 @@
 # Importing libraries needed for Operating System Manipulation in Python
-import os
+import os, sys
+sys.path.append("..")
 
 # Importing libraries  for file names and paths
 from pathlib import Path
@@ -11,7 +12,7 @@ from time import strftime
 import tensorflow as tf
 
 # Setting log path
-root_logdir = os.path.join(os.curdir, "../logs")
+root_logdir = Path('../logs/')
 
 def get_run_logdir(root_logdir="logs"):
     return Path(root_logdir) / strftime("run_%Y_%m_%d_%H_%M_%S")
