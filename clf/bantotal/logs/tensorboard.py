@@ -11,16 +11,13 @@ from time import strftime
 # Import libraries TensorFlow e Keras
 import tensorflow as tf
 
-# Setting log path
-root_logdir = Path('../logs/')
-
 def get_run_logdir(root_logdir="logs"):
     return Path(root_logdir) / strftime("run_%Y_%m_%d_%H_%M_%S")
 
 def name_logdir(name):
     # Increment every time you train the model
     run_index = 1
-    run_logdir = Path() / "logs" / f"{name}"
+    run_logdir = Path() / "../logs" / f"{name}"
 
     # Return Callback TensorBoard()
     return tf.keras.callbacks.TensorBoard(run_logdir)

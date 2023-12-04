@@ -52,6 +52,6 @@ def feature_imp(xFeatures, target,scoring,n_best_features, n_iter=None, cv=None,
     feature_imp = best_clf_rdcv.get_booster().get_score()
     # Creating dataframe with what key features
     best_features = pd.DataFrame(data=feature_imp.values(), index=feature_imp.keys(),
-                                 columns=["score_XGBRFClassifier"]).sort_values(by="score_XGBRFClassifier", ascending=True).nlargest(n_best_features, columns="score_XGBRFClassifier" )
+                                 columns=["score_XGBRFClassifier"]).sort_values(by="score_XGBRFClassifier", ascending=True).nlargest(n_best_features, columns="score_XGBRFClassifier")
     # Return the best features
     return best_features
